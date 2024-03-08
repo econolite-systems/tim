@@ -1,0 +1,4 @@
+apiVersion: v1
+description: ODE TIM Worker Service
+name: "ode-tim-worker-service"
+version: 0.1.0

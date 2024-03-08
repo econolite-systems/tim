@@ -1,0 +1,17 @@
+{
+  "actionSetId": "5c166257-39fb-4caa-a469-79ee25a3f8e6",
+  "id": "27f5fca7-0b8a-44e8-a9ac-4118e9496dd4",
+  "cancel": false,
+  "actionType": "send-tim-message",
+  "info": "Bumps",
+  "transmitMode": "Alternating",
+  "messageType": "Information",
+  "durationType": "Minutes",
+  "duration": "5",
+  "targetType": "target",
+  "latitude": 38.915467,
+  "longitude": -104.821298,
+  "parameter": [
+    "19fe2cba-d5d0-405f-b7c1-4f72b14ac402"
+  ]
+}

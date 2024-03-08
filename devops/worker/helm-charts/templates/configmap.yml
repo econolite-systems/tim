@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "default-chart.fullname" . }}
+data:
+  appsettings.Production.json: |
+    {
+      "Authentication": {
+          "Authority": "{{ .Values.connectionStrings.identity }}"
+      },
+      "Kafka": {
+          "bootstrap": {
+              "servers": "{{ .Values.kafka.bootstrapServer }}"
+          },
+          "sasl": {
+              "mechanism": "SCRAM-SHA-512",
+              "username": "{{ .Values.kafka.userName }}"
+          },
+          "security": {
+               "protocol": "{{.Values.kafka.security.protocol}}"
+          },
+          "GroupId": "{{ .Values.kafka.groupid | default .Release.Namespace }}"
+      },
+      "Mongo": {
+        "DbName": "{{ .Values.mongoDatabase }}"
+      }
+    }

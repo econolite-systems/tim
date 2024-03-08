@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+<!-- SPDX-License-Identifier: MIT -->
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>dotnet-Worker.TimService-AE71B187-E327-4378-B15F-CDC6ADA9361D</UserSecretsId>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <RootNamespace>Econolite.Ode.Worker.TimService</RootNamespace>
+    <Copyright>2023-&lt;&lt;CURRENT_YEAR&gt;&gt; Econolite Systems, Inc.</Copyright>
+</PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="$(SolutionDir)\common\Messaging\Messaging.csproj" />
+        <ProjectReference Include="$(SolutionDir)\common\Monitoring\Monitoring.csproj" />
+        <ProjectReference Include="$(SolutionDir)\common\Persistence.Mongo\Persistence.Mongo.csproj" />
+        <ProjectReference Include="..\Api.JpoOdeTim\Api.JpoOdeTim.csproj" />
+        <ProjectReference Include="$(SolutionDir)\logic-statements\Router.ActionSet.Messaging\Router.ActionSet.Messaging.csproj" />
+        <ProjectReference Include="..\Models.Tim\Models.Tim.csproj" />
+        <ProjectReference Include="..\Services.TimService\Services.TimService.csproj" />
+      <ProjectReference Include="$(SolutionDir)\common\Messaging\Messaging.csproj" />
+      <ProjectReference Include="$(SolutionDir)\common\Persistence.Mongo\Persistence.Mongo.csproj" />
+      <ProjectReference Include="..\Models.Tim\Models.Tim.csproj" />
+      <ProjectReference Include="..\Services.TimService\Services.TimService.csproj" />
+    </ItemGroup>
+</Project>

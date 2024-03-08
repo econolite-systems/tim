@@ -1,0 +1,12 @@
+odeTimApi:
+  name: ode-tim-api
+  imageRepository: cosysdev.azurecr.io/ode-tim-api
+  service:
+    port: 80
+  probes:
+    enabled: false
+  ingress:
+    host: api.mound-rd.cosysdev.com
+  kafka:
+    groupId: 'tim-service'
+  resources: {}
